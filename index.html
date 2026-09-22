@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我要成为海贼王的男人</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    min-height: 100vh;
+    background: linear-gradient(160deg, #0d1b2a 0%, #1b263b 50%, #415a77 100%);
+    font-family: "KaiTi", "STKaiti", "楷体", serif;
+    color: #f5e6c8;
+    overflow-x: hidden;
+  }
+
+  /* ===== 顶部：海贼王大标题（艺术字） ===== */
+  header {
+    text-align: center;
+    padding: 80px 20px 40px;
+    position: relative;
+  }
+
+  .jolly-roger {
+    font-size: 64px;
+    display: block;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.6));
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  .big-title {
+    font-size: clamp(36px, 8vw, 72px);
+    font-weight: 900;
+    letter-spacing: 6px;
+    background: linear-gradient(180deg,
+      #ffe66d 0%, #ffb703 40%, #fb8500 70%, #e36414 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 6px 30px rgba(255, 150, 0, 0.35);
+    transform: rotate(-2deg);
+    display: inline-block;
+  }
+
+  .subtitle {
+    margin-top: 18px;
+    font-size: 18px;
+    color: #98c1d9;
+    letter-spacing: 4px;
+  }
+
+  /* ===== 名言卡片 ===== */
+  .quotes {
+    max-width: 800px;
+    margin: 40px auto 80px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+  }
+
+  .card {
+    position: relative;
+    background: rgba(245, 230, 200, 0.07);
+    border: 2px solid rgba(255, 215, 0, 0.25);
+    border-radius: 18px;
+    padding: 34px 40px 28px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s, border-color 0.3s;
+  }
+
+  .card:hover {
+    transform: scale(1.02) rotate(0.5deg);
+    border-color: #ffb703;
+  }
+
+  .card:nth-child(odd)  { transform: rotate(-1deg); }
+  .card:nth-child(even) { transform: rotate(1deg); }
+  .card:nth-child(odd):hover  { transform: scale(1.02) rotate(0deg); }
+  .card:nth-child(even):hover { transform: scale(1.02) rotate(0deg); }
+
+  .num {
+    position: absolute;
+    top: -22px;
+    left: 24px;
+    background: #ffb703;
+    color: #1b263b;
+    font-weight: 900;
+    font-size: 15px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 14px rgba(255, 183, 3, 0.5);
+    font-family: "Arial", sans-serif;
+  }
+
+  .quote-text {
+    font-size: clamp(20px, 3.4vw, 30px);
+    line-height: 1.7;
+    color: #ffeec9;
+  }
+
+  .quote-text .hl {
+    color: #ffb703;
+    font-weight: bold;
+  }
+
+  .quote-note {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #8d99ae;
+    letter-spacing: 2px;
+  }
+
+  /* ===== 底部：座右铭 ===== */
+  footer {
+    text-align: center;
+    padding: 50px 20px 70px;
+  }
+
+  .motto {
+    display: inline-block;
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: 900;
+    letter-spacing: 8px;
+    color: #0d1b2a;
+    background: linear-gradient(135deg, #ffe66d, #ffb703);
+    padding: 18px 36px;
+    border-radius: 14px;
+    transform: rotate(-1.5deg);
+    box-shadow: 0 10px 40px rgba(255, 183, 3, 0.4);
+  }
+
+  .flag {
+    margin-top: 24px;
+    font-size: 14px;
+    color: #98c1d9;
+    letter-spacing: 3px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="jolly-roger">🏴‍☠️</span>
+  <h1 class="big-title">我要成为海贼王的男人</h1>
+  <p class="subtitle">—— 个人简介 · 销售心法 · 提醒自己 ——</p>
+</header>
+
+<main class="quotes">
+
+  <div class="card">
+    <span class="num">开篇宣言</span>
+    <p class="quote-text">我并不是个销售，我只是<span class="hl">提供服务</span>。</p>
+    <p class="quote-note">第一句话，先定调。</p>
+  </div>
+
+  <div class="card">
+    <span class="num">心法一</span>
+    <p class="quote-text">什么事情都要<span class="hl">包装</span>。</p>
+    <p class="quote-note">草帽也要讲出传奇的故事。</p>
+  </div>
+
+  <div class="card">
+    <span class="num">心法二</span>
+    <p class="quote-text">这是我弟弟从云南旅游带回来的<span class="hl">香蕉</span>，挺好吃的。🍌</p>
+    <p class="quote-note">拉近关系，从一根香蕉开始。</p>
+  </div>
+
+  <div class="card">
+    <span class="num">心法三</span>
+    <p class="quote-text">凡事要<span class="hl">谈心</span>，要让对方觉得是<span class="hl">为了他好</span>。</p>
+    <p class="quote-note">真诚是最大的套路。</p>
+  </div>
+
+  <div class="card">
+    <span class="num">心法四</span>
+    <p class="quote-text">这么好的<span class="hl">保险产品</span>，你们可不能错过。</p>
+    <p class="quote-note">机会，只留给相信的人。</p>
+  </div>
+
+  <div class="card">
+    <span class="num">最高境界</span>
+    <p class="quote-text">销售就是让他<span class="hl">赔 8000 块钱</span>，他都感觉是为了他好。</p>
+    <p class="quote-note">此乃毕生修行的方向。💰</p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="motto">谈心 · 包装 · 利他</div>
+  <p class="flag">🏴‍☠️ 伟大航路，始于足下 —— 与君共勉</p>
+</footer>
+
+</body>
+</html>
